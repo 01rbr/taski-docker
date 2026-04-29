@@ -16,9 +16,9 @@ services:
   frontend:
     image: 01rbr/taski_frontend  # Качаем с Docker Hub
     env_file: .env
-    command: cp -r /app/build/. /frontend_static/
     volumes:
       - static_volume:/frontend_static
+    command: cp -r /app/build/. /frontend_static/
   gateway:
     image: 01rbr/taski_gateway  # Качаем с Docker Hub
     env_file: .env
